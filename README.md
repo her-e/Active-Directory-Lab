@@ -11,7 +11,7 @@ In this lab, I am going to walk through how to create an Active Directory home l
     <li>  Oracle VirtualBox Installation </li>    
   </ul>
 <br/>
-There will be 3 parts to complete this Lab:
+There will be 2 main parts to complete this Lab:
 <br/>
 <br/>
 1. Set up and configure <B>Domain Controller</B>.
@@ -24,14 +24,20 @@ There will be 3 parts to complete this Lab:
     <li> Create Domain Admin Account </li>   
   </ul>
 <br/>
-2. Configure Networks.
+1.1. Configure Networks.
   <ul>
     <li> Remote Access Server <B>(RAS)</B> and Network Address Translation <B> (NAT)</B> </li>
     <li> Dynamic Host Configuration Protocol Server<B> (DHCP)</B> </li>
   </ul>
 <br/>
-3. Create new Windows 10 Virtual Machine and join Domain.
+1.2. Create new Windows 10 Virtual Machine and join Domain.
 <br />
+<br />
+2. Applying and Cinfiguring Group Policy Objects.
+  <ul>
+    <li> Wallpaper <B> (NAT)</B> </li>
+    <li> Command Prompt <B> </B> </li>
+  </ul>
  <h2> Languages and Utilities Used </h2>
   <ul>
     <li> <b>Oracle VirtualBox</b> </li>
@@ -81,7 +87,7 @@ Promote User to Domain Admin Account (Member of Domain Admins), then sign into N
 <br />
 <br />
 
-<h3>Part 2: Configure Networks (RAS/NAT ,DHCP):<h3>
+<h3>Part 1.1: Configure Networks (RAS/NAT ,DHCP):<h3>
 <p align="center">
 Install and Configure Remote Access Service (Add Roles and Feature):
 <br/>
@@ -116,7 +122,7 @@ Activate Scope and Authorize:<br/>
 <br />
 
 
-<h3>Part 3: Create new Windows 10 Virtual Machine and join Domain.:<h3>
+<h3>Part 1.2: Create new Windows 10 Virtual Machine and join Domain:<h3>
 <p align="center">
 Set up Windows 10 (New VM), Verify IP Address for 172.16.0.100 on Command Prompt, then Ping www.google.com to verify network connection.
 <br/>
@@ -133,12 +139,37 @@ Rename PC to "Client1" and join Domain (Herlabs.com).
 <br />
 <br />
 
-<h2>Results</h2>
-<h3>Look up Address Lease to Client1 on Domain Controller (Herlabs.com)</h3>
-<p align="center">
+
+<h3>Results: Look up Address Lease to Client1 on Domain Controller (Herlabs.com)</h3>
+ <p align="center">
 <img src="https://imgur.com/STMkoaG.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
 
+<h3>Part 2: Apply and Configuring Group Policy Objects<h3>
+<p align="center">
+Create Organizational Unit "Accounting Department", then create Sub-Organizational Unit called "Users" under "Accounting Department", then create a new user under Sub-Organizational Unit "Users":
+<p align="center">
+<img src="https://imgur.com/CZnFOTx.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+Create new user under Sub-Organizational Unit "Users":
+<p align="center">
+<img src="https://imgur.com/RzqIGRJ.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+Open Group Policy Management in the tools and create GPO under Sub-Orgabizational Unit "Users":
+<p align="center">
+<img src="https://imgur.com/RzqIGRJ.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+ 
+ 
 
+ 
+ 
+ 
+ 
 <!--
  ```diff
 - text in red
