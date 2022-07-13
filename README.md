@@ -33,12 +33,12 @@ There will be 2 main parts to complete this Lab:
 1.2. Create new Windows 10 Virtual Machine and join Domain.
 <br />
 <br />
-2. Applying and Cinfiguring Group Policy Objects.
+2. Applying and Configuring Group Policy Objects.
   <ul>
     <li> Wallpaper <B> (NAT)</B> </li>
     <li> Command Prompt <B> </B> </li>
   </ul>
- <h2> Languages and Utilities Used </h2>
+ <h2> Utilities Used </h2>
   <ul>
     <li> <b>Oracle VirtualBox</b> </li>
   </ul>
@@ -146,26 +146,46 @@ Rename PC to "Client1" and join Domain (Herlabs.com).
 <br />
 <br />
 
-<h3>Part 2: Apply and Configuring Group Policy Objects<h3>
+<h3>Part 2: Apply and Configuring Group Policy Objects for Software Deployment (Google Chrome and Microsoft Teams)<h3>
 <p align="center">
-Create Organizational Unit "Accounting Department", then create Sub-Organizational Unit called "Users" under "Accounting Department", then create a new user under Sub-Organizational Unit "Users":
+Create Group "Software Deployment" under Users in domain (Herlabs.com), then add PC workstations as members (in this case, its "Client1"):
 <p align="center">
-<img src="https://imgur.com/CZnFOTx.png" height="80%" width="80%" alt="Active Directory"/>
+<img src="https://imgur.com/H6uJWBd.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Create new user under Sub-Organizational Unit "Users":
 <p align="center">
-<img src="https://imgur.com/RzqIGRJ.png" height="80%" width="80%" alt="Active Directory"/>
-<br />
-<br />
-Open Group Policy Management in the tools and create GPO under Sub-Orgabizational Unit "Users":
+Make new file called "Software" with MSI installers files and share folders with "Authenticated Users". Give permission for "Full" control.
+(Have MSI installers in a file before this step)
 <p align="center">
-<img src="https://imgur.com/RzqIGRJ.png" height="80%" width="80%" alt="Active Directory"/>
+<img src="https://imgur.com/wsAFBpN.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
- 
- 
-
+Add security group "Software Deployment" to security tab:
+<p align="center">
+<img src="https://imgur.com/g9kS42J.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+Create Group Policy Object in Domain (Herlabs.com), edit, go to Computer Configuration -> Policies -> Software Settings -> Software Installation. Then right click new packages on Software Installation, then find MSI installer files, open, then add them in:
+<p align="center">
+<img src="https://imgur.com/8jyjs6G.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+Remove "Authenticated Users" in "Security Filtering", then add Security Group, "Software Deployment":
+<p align="center">
+<img src="https://imgur.com/orGCgEh.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+Login to workstation "Client1" with a created user to verify software:
+<p align="center">
+<img src="https://imgur.com/KEfbpf0.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
+<p align="center">
+Configure Group Policy Object to change desktop background:
+<p align="center">
+<img src="https://imgur.com/KWQ6awT.png" height="80%" width="80%" alt="Active Directory"/>
+<br />
+<br />
  
  
  
