@@ -17,26 +17,26 @@ There will be 2 main parts to complete this Lab:
 1. Set up and configure <B>Domain Controller</B>.
 <br/>
   <ul>
-    <li> Assign <B>IP Address</B> to Internal Network </li>
-    <li> Rename Server to "DC" (Domain Controller) </li>
-    <li> Add Active Directory Domain Services </li>
-    <li> Promote Domain Controller </li>
-    <li> Create Domain Admin Account </li>   
+    <li> Assign <B>IP Address</B> to Internal Network. </li>
+    <li> <B>Rename Server</B> to "DC" (Domain Controller). </li>
+    <li> Add <B>Active Directory Domain Services</B>. </li>
+    <li> <B>Promote</B> Domain Controller. </li>
+    <li> Create Domain Admin Account. </li>   
   </ul>
 <br/>
-1.1. Configure Networks.
+ 1.1. Configure Networks.
   <ul>
-    <li> Remote Access Server <B>(RAS)</B> and Network Address Translation <B> (NAT)</B> </li>
-    <li> Dynamic Host Configuration Protocol Server<B> (DHCP)</B> </li>
+    <li> Remote Access Server <B>(RAS)</B> and Network Address Translation <B> (NAT).</B> </li>
+    <li> Dynamic Host Configuration Protocol Server<B> (DHCP).</B> </li>
   </ul>
 <br/>
-1.2. Create new Windows 10 Virtual Machine and join Domain.
+ 1.2. Create new Windows 10 Virtual Machine and join Domain.
 <br />
 <br />
-2. Applying and Configuring Group Policy Objects.
+2. Applying and Configuring <B>Group Policy Objects</B>.
   <ul>
-    <li> Wallpaper <B> (NAT)</B> </li>
-    <li> Command Prompt <B> </B> </li>
+    <li> Software Deployment using MSI installers (Google Chrome and Microsoft Teams). </li>
+    <li> Desktop Background Wallpaper Change. </li>
   </ul>
  <h2> Utilities Used </h2>
   <ul>
@@ -160,7 +160,7 @@ Make new file called "Software" with MSI installers files and share folders with
 <img src="https://imgur.com/wsAFBpN.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
 <br />
-Add security group "Software Deployment" to security tab:
+Add Security Group "Software Deployment" to security tab:
 <p align="center">
 <img src="https://imgur.com/g9kS42J.png" height="80%" width="80%" alt="Active Directory"/>
 <br />
